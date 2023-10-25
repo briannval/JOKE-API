@@ -13,6 +13,9 @@
         margin-top: 80px;
       }
 
+      p {
+        color: #FFFFFF;
+      }
       
       .qry{
         padding-left: 50px;
@@ -39,11 +42,11 @@
 </head>
 <body>
     <div class="container">
-    <form>
+    <form method="post">
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Contains</label>
           <div class="col-sm-10 qry">
-            <input type="text" class="form-control" id="contains">
+            <input type="text" class="form-control" id="contains" name="contains">
           </div>
         </div>
         <fieldset class="form-group">
@@ -51,13 +54,13 @@
             <legend class="col-form-label col-sm-2 pt-0">Type</legend>
             <div class="col-sm-10 qry">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <input class="form-check-input" type="radio" name="type" id="type1" value="Single">
                 <label class="form-check-label" for="gridRadios1">
                   Single
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <input class="form-check-input" type="radio" name="type" id="type2" value="Twopart">
                 <label class="form-check-label" for="gridRadios2">
                   Twopart
                 </label>
@@ -69,25 +72,25 @@
           <legend class="col-form-label col-sm-2 pt-0">Blacklist</legend>
             <div class="col-sm-10 qry">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <input class="form-check-input" type="radio" name="blacklist" id="blacklist1" value="NSFW">
                 <label class="form-check-label" for="gridRadios1">
                   NSFW
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <input class="form-check-input" type="radio" name="blacklist" id="blacklist2" value="Racist">
                 <label class="form-check-label" for="gridRadios2">
                   Racist
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <input class="form-check-input" type="radio" name="blacklist" id="blacklist3" value="Sexist">
                 <label class="form-check-label" for="gridRadios2">
                   Sexist
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <input class="form-check-input" type="radio" name="blacklist" id="blacklist4" value="Explicit">
                 <label class="form-check-label" for="gridRadios2">
                   Explicit
                 </label>
@@ -96,10 +99,11 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
-            <button type="submit"><label>Search</label></button>
+            <input type="submit" value="SEARCH" formaction="/result">
           </div>
         </div>
       </form>
+      <p>Hello</p>
     </div>
 </body>
 </html>
